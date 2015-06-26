@@ -1,0 +1,17 @@
+<!doctype html>
+<!--suppress HtmlUnknownTarget -->
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>UP API Demo</title>
+    </head>
+    <body>
+        {% if user_info %}
+            <h1>User Info</h1>
+            <p>{{ user_info }}</p>
+            <h1>Actions</h1>
+            <p><a href="/create_generic">Create a generic event</a></p>
+            <p><a href="/disconnect">Disconnect</a></p>
+        {% else %}
+            <p><a href="/up_login">Connect to UP</a></p>
+    </body>
+</html>
