@@ -1,0 +1,1 @@
+web: gunicorn HeroDemo:app --log-file=-
