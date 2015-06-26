@@ -1,0 +1,21 @@
+{
+    "name": "UP API Demo App",
+    "description": "A simple app to interact with the UP API",
+    "repository": "https://github.com/ray-ray/HeroDemo",
+    "logo": "http://a5.mzstatic.com/us/r30/Purple1/v4/64/2d/f6/642df65b-c915-cf78-9137-680ca7df2951/icon175x175.jpeg",
+    "website": "https://jawbone.com/up/developer",
+    "repository": "https://github.com/ray-ray/HeroDemo",
+    "success_url": "/",
+    "env": {
+        "up_id": {
+            "description": "UP application Client Id"
+        },
+        "up_secret": {
+            "description": "UP application App Secret"
+        },
+        "secret_key": {
+            "description": "Secret key to encrypt cookies",
+            "generator": "secret"
+        }
+    }
+}
