@@ -16,7 +16,7 @@ app.secret_key = keys.secret_key
 UP = {
     'client_id': keys.up_id,
     'client_secret': keys.up_secret,
-    'redirect_uri': 'https://herodemo.com/up_authorized',
+    'redirect_uri': 'https://raydemo.herokuapp.com/up_authorized',
     'scope': ['basic_read', 'extended_read', 'generic_event_write'],
     'authorization_url': 'https://jawbone.com/auth/oauth2/auth',
     'request_token_url': 'https://jawbone.com/auth/oauth2/token'
