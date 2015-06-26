@@ -13,7 +13,7 @@ On your [organization page](https://jawbone.com/up/developer/account/), click Cr
 
 Fill in the form to create your application (for now, you can use fake URLs and edit them after deploying).
 
-Once you have created your application, you will need to take note of your *Client Id* and *App Secret* as you will need to enter them when you deploy.
+Once you have created your application, you will need to take note of your **Client Id** and **App Secret** as you will need to enter them when you deploy.
 
 And finally, click the button below to deploy to Heroku!
 
