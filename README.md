@@ -17,4 +17,5 @@ Once you have created your application, you will need to take note of your **Cli
 
 And finally, click the button below to deploy to Heroku!
 
-**COMING SOON**
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
