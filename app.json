@@ -7,10 +7,13 @@
     "repository": "https://github.com/ray-ray/HeroDemo",
     "success_url": "/",
     "env": {
-        "up_id": {
+        "app_name": {
+            "description": "Heroku app name for your domain"
+        }
+        "client_id": {
             "description": "UP application Client Id"
         },
-        "up_secret": {
+        "app_secret": {
             "description": "UP application App Secret"
         },
         "secret_key": {

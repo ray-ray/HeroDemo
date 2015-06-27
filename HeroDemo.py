@@ -6,7 +6,6 @@ Flask app to demonstrate the UP API:
 """
 import flask
 import keys
-import os
 import requests_oauthlib
 
 
@@ -15,9 +14,9 @@ app.secret_key = keys.secret_key
 
 
 UP = {
-    'client_id': keys.up_id,
-    'client_secret': keys.up_secret,
-    'redirect_uri': 'https://raydemo.herokuapp.com/up_authorized',
+    'client_id': keys.client_id,
+    'client_secret': keys.app_secret,
+    'redirect_uri': 'https://%s.herokuapp.com/up_authorized' % keys.app_name,
     'scope': ['basic_read', 'extended_read', 'generic_event_write'],
     'authorization_url': 'https://jawbone.com/auth/oauth2/auth',
     'request_token_url': 'https://jawbone.com/auth/oauth2/token'
@@ -84,7 +83,7 @@ def create_generic():
     :return: redirect to the homepage
     """
     up_oauth = requests_oauthlib.OAuth2Session(
-        keys.up_id,
+        keys.client_id,
         token=flask.session['tokens'])
     up_oauth.post(
         'https://jawbone.com/nudge/api/users/@me/generic_events',
@@ -102,7 +101,7 @@ def get_user_info():
     :return: JSON of the user details
     """
     up_oauth = requests_oauthlib.OAuth2Session(
-        keys.up_id,
+        keys.client_id,
         token=flask.session['tokens'])
     upr = up_oauth.get('https://jawbone.com/nudge/api/users/@me')
     return upr.json()
@@ -122,8 +121,7 @@ def home():
 
     return flask.render_template(
         'herodemo.html',
-        user_info=user_info,
-        debug='%s' % os.environ)
+        user_info=user_info)
 
 
 if __name__ == '__main__':
