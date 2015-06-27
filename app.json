@@ -9,7 +9,7 @@
     "env": {
         "app_name": {
             "description": "Heroku app name for your domain"
-        }
+        },
         "client_id": {
             "description": "UP application Client Id"
         },
