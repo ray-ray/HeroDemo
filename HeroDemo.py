@@ -6,6 +6,7 @@ Flask app to demonstrate the UP API:
 """
 import flask
 import keys
+import os
 import requests_oauthlib
 
 
@@ -121,7 +122,8 @@ def home():
 
     return flask.render_template(
         'herodemo.html',
-        user_info=user_info)
+        user_info=user_info,
+        debug='%s' % os.environ)
 
 
 if __name__ == '__main__':
