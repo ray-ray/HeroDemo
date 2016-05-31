@@ -57,7 +57,8 @@ def up_authorized():
     tokens = oauth.fetch_token(
         UP['request_token_url'],
         authorization_response=url,
-        client_secret=UP['client_secret'])
+        client_secret=UP['client_secret'],
+        code=flask.request.args.get('code'))
 
     flask.session['tokens'] = tokens
     return flask.redirect(flask.url_for('home'))
